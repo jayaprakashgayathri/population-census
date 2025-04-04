@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population Census Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #eef2f3;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            margin-top: 50px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            font-size: 26px;
+        }
+        .login-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .login-button:hover {
+            background: #0056b3;
+        }
+        .options {
+            margin-top: 30px;
+        }
+        .option {
+            display: block;
+            width: 90%;
+            padding: 15px;
+            margin: 10px auto;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .option:hover {
+            background: #218838;
+        }
+        #map {
+            height: 400px;
+            width: 90%;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <a href="homepage.html" class="login-button">Login</a>
+    <div class="container">
+        <h1>Population Census Management</h1>
+        <div class="options">
+            <a href="birthrate.html" class="option">Birthrate</a>
+            <a href="mortality.html" class="option">Mortality Rate</a>
+            <a href="add-edit-data.html" class="option">Add/Edit Data</a>
+            <a href="income.html" class="option">Income per Head</a>
+            <a href="sexratio.html" class="option">Sex Ratio</a>
+        </div>
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var map = L.map('map', {
+                center: [20.5937, 78.9629],
+                zoom: 5,
+                zoomControl: true,
+                preferCanvas: true
+            });
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors',
+                maxZoom: 18,
+            }).addTo(map);
+            var heatData = [
+                [28.7041, 77.1025, 1],
+                [19.0760, 72.8777, 0.9],
+                [13.0827, 80.2707, 0.8],
+                [22.5726, 88.3639, 0.7],
+                [12.9716, 77.5946, 0.8],
+                [25.3176, 82.9739, 0.6],
+                [26.9124, 75.7873, 0.6]
+            ];
+            var heat = L.heatLayer(heatData, {
+                radius: 25,
+                blur: 15,
+                maxZoom: 10,
+                minOpacity: 0.4
+            }).addTo(map);
+        });
+    </script>
+</body>
+</html>
