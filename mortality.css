@@ -1,0 +1,46 @@
+body {
+    background-color: #f0f8ff; /* Light blue background for Mortality Rate */
+}
+
+.header {
+    background: #ff6347; /* Tomato color for header */
+}
+
+.card {
+    background: #ff4500; /* OrangeRed for cards */
+}
+
+.card:hover {
+    background: #dc143c; /* Crimson on hover */
+}
+
+.container {
+    padding: 20px;
+}
+
+.submit-button {
+    background: #ff6347; /* Tomato color for submit button */
+}
+
+.submit-button:hover {
+    background: #dc143c; /* Darker shade on hover */
+}
+
+.back-button {
+    padding: 10px 20px;
+    background: #ff6347; /* Tomato color for back button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.back-button:hover {
+    background: #dc143c; /* Darker shade on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Drop shadow */
+    transform: translateY(-3px); /* Pop-up effect */
+}
