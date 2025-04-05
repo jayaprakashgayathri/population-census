@@ -1,0 +1,46 @@
+body {
+    background-color: #fffacd; /* LemonChiffon background for Birth Rate */
+}
+
+.header {
+    background: #ffd700; /* Gold for header */
+}
+
+.card {
+    background: #ffa500; /* Orange for cards */
+}
+
+.card:hover {
+    background: #ff8c00; /* DarkOrange on hover */
+}
+
+.container {
+    padding: 20px;
+}
+
+.submit-button {
+    background: #ffd700; /* Gold for submit button */
+}
+
+.submit-button:hover {
+    background: #ff8c00; /* Darker shade on hover */
+}
+
+.back-button {
+    padding: 10px 20px;
+    background: #ffd700; /* Gold for back button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.back-button:hover {
+    background: #ff8c00; /* Darker shade on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Drop shadow */
+    transform: translateY(-3px); /* Pop-up effect */
+}
