@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaggle-Like Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+        .sidebar h2 {
+            font-size: 24px;
+            color: #0072B8; /* Kaggle blue */
+            margin: 0 0 20px;
+        }
+        .sidebar .option {
+            padding: 10px 0;
+            cursor: pointer;
+        }
+        .sidebar .option:hover {
+            background-color: #eaeaea;
+        }
+        .map-container {
+            flex: 1;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        #map {
+            height: 100%;
+            width: 100%;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Kaggle</h2>
+    <div class="option">+ Create</div>
+    <div class="option">Home</div>
+    <div class="option">Competitions</div>
+    <div class="option">Datasets</div>
+    <div class="option">Models</div>
+    <div class="option">Code</div>
+    <div class="option">Discussions</div>
+    <div class="option">Learn</div>
+    <div class="option">More</div>
+</div>
+
+<div class="map-container">
+    <div id="map"></div>
+</div>
+
+<script>
+    function initMap() {
+        // Initialize and add the map
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: -34.397, lng: 150.644 },
+            zoom: 8,
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Sidebar Container */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light background */
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto; /* Scrollable if content exceeds height */
+    border-right: 1px solid #ddd; /* Border */
+}
+
+/* Sidebar Header */
+.sidebar-header {
+    padding: 20px;
+    font-size: 24px;
+    color: #1a73e8; /* Highlight color */
+    text-align: center;
+}
+
+/* Create Button */
+.create-button {
+    background-color: #1a73e8; /* Primary button color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+    display: block;
+    text-align: center;
+}
+
+/* Navigation Items */
+.nav-item {
+    padding: 15px 20px;
+    color: #333; /* Default text color */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Icon */
+.nav-item i {
+    margin-right: 10px; /* Spacing between icon and text */
+}
+
+/* Active Item */
+.nav-item.active {
+    background-color: #e9ecef; /* Highlighting active item */
+    color: #1a73e8; /* Active text color */
+}
+
+/* Hover Effect */
+.nav-item:hover {
+    background-color: #e2e6ea; /* Lighter gray on hover */
+}
+
+/* Footer Links */
+.sidebar-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 12px;
+    color: #777; /* Footer text color */
+}
+
+/* Responsive Styles */
+@media(max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Reduced sidebar width on smaller screens */
+    }
+}
