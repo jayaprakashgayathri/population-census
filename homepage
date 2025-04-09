@@ -11,7 +11,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-image: url('enhanced_image.png'); /* Background image */
+            background-image: url("/static/enhanced_image.png"); /* Background image */
             background-size: cover;
             background-position: center;
             color: #ffffff;
@@ -111,19 +111,21 @@
 <body>
 
     <div class="header">
-        <img src="population census logo.png" alt="Censalyze Logo" class="logo">
+        <img src="/static/population census logo.png" alt="Censalyze Logo" class="logo">
         <div class="title">Censalyze</div>
-        <a href="login.html" class="login-button">Login</a>
+        <a href="{{ url_for('login') }}" class="login-button">Login</a>
     </div>
 
     <div class="container">
         <h1>Population Data Management</h1>
         <div class="options">
-            <a href="birthrate.html" class="option">Birthrate</a>
-            <a href="mortality.html" class="option">Mortality Rate</a>
-            <a href="add-edit-data.html" class="option">Add/Edit Data</a>
-            <a href="income.html" class="option">Income per Head</a>
-            <a href="sexratio.html" class="option">Sex Ratio</a>
+            <div class="options">
+                <a href="{{ url_for('birthrate') }}" class="option">Birthrate</a>
+                <a href="{{ url_for('mortality') }}" class="option">Mortality Rate</a>
+                <a href="{{ url_for('add_edit') }}" class="option">Add/Edit Data</a>
+                <a href="{{ url_for('income') }}" class="option">Income per Head</a>
+                <a href="{{ url_for('sexratio') }}" class="option">Sex Ratio</a>
+            </div>            
         </div>
         <div id="map"></div>
     </div>
