@@ -1,46 +1,98 @@
 body {
-    background-color: #fffacd; /* LemonChiffon background for Birth Rate */
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('enhanced_image.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
 }
 
 .header {
-    background: #ffd700; /* Gold for header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(27, 42, 47, 0.9);
+    padding: 15px 30px;
 }
 
-.card {
-    background: #ffa500; /* Orange for cards */
+.header-left {
+    display: flex;
+    align-items: center;
 }
 
-.card:hover {
-    background: #ff8c00; /* DarkOrange on hover */
+.logo {
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 15px;
+    cursor: pointer;
 }
 
-.container {
-    padding: 20px;
+.header h1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #81c784;
+    margin: 0;
 }
 
-.submit-button {
-    background: #ffd700; /* Gold for submit button */
+.header-buttons {
+    display: flex;
+    gap: 15px;
 }
 
-.submit-button:hover {
-    background: #ff8c00; /* Darker shade on hover */
-}
-
-.back-button {
+.login-button,
+.add-edit-button {
     padding: 10px 20px;
-    background: #ffd700; /* Gold for back button */
+    background-color: #81c784;
     color: white;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     text-decoration: none;
-    font-size: 16px;
-    margin-left: 10px;
-    transition: all 0.3s ease; /* Smooth transition for all properties */
+    font-size: 14px;
+    transition: 0.3s ease;
 }
 
-.back-button:hover {
-    background: #ff8c00; /* Darker shade on hover */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Drop shadow */
-    transform: translateY(-3px); /* Pop-up effect */
+.login-button:hover,
+.add-edit-button:hover {
+    background-color: #66bb6a;
+}
+
+.container {
+    background-color: rgba(35, 56, 63, 0.95);
+    width: 80%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    font-size: 24px;
+    color: #81c784;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #80c684;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    background-color: #66bb6a;
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-top: 0;
 }
