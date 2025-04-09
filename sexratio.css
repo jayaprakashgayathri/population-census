@@ -1,46 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-    background-color: #fff0f5; /* Lavender background for Sex Ratio */
+    font-family: 'Poppins', sans-serif;
+    background-image: url('enhanced_image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
 }
 
+/* HEADER STYLING */
 .header {
-    background: #9370db; /* MediumPurple for header */
+    background-color: #23383f;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.header-left h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #81c784;
+    margin: 0;
+}
+
+.header-buttons a {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background: #81c784;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.header-buttons a:hover {
+    background: #66bb6a;
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 80%;
+    margin: 30px auto;
+    background-color: #23383f;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* TITLES */
+h2 {
+    color: #81c784;
+    margin-bottom: 20px;
+}
+
+/* CARD SECTION */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .card {
-    background: #8a2be2; /* BlueViolet for cards */
+    background: #2e4b52;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background 0.3s;
 }
 
 .card:hover {
-    background: #6a5acd; /* SlateBlue on hover */
-}
-
-.container {
-    padding: 20px;
-}
-
-.submit-button {
-    background: #9370db; /* MediumPurple for submit button */
-}
-
-.submit-button:hover {
-    background: #6a5acd; /* Darker shade on hover */
-}
-
-.back-button {
-    padding: 10px 20px;
-    background: #9370db; /* MediumPurple for back button */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 16px;
-    margin-left: 10px;
-    transition: all 0.3s ease; /* Smooth transition for all properties */
-}
-
-.back-button:hover {
-    background: #6a5acd; /* Darker shade on hover */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Drop shadow */
-    transform: translateY(-3px); /* Pop-up effect */
+    background: #3a5f67;
+    transform: translateY(-5px);
 }
