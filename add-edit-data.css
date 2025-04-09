@@ -1,88 +1,99 @@
 body {
-    background-color: #f9f9f9; /* Light gray background for the Add/Edit Data page */
-    font-family: Arial, sans-serif; /* Use a clean, modern font */
+    background: url('enhanced_image.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: white;
 }
 
 .header {
-    background: #4CAF50; /* Green color for header */
-    color: white; /* White text color */
-    padding: 20px; /* Padding for header */
-    text-align: center; /* Center align header text */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1b2a2f;
+    padding: 20px 40px;
 }
 
-.header-buttons {
-    margin-top: 10px; /* Space between header and buttons */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.title-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #81c784;
 }
 
 .header-buttons a {
-    text-decoration: none; /* Remove underline from links */
-    color: white; /* White text color for buttons */
-    padding: 10px 15px; /* Padding for buttons */
-    border-radius: 5px; /* Rounded corners */
-    margin: 0 5px; /* Margin between buttons */
-    transition: background 0.3s ease; /* Smooth transition for background color */
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #81c784;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-size: 14px;
 }
 
 .header-buttons a:hover {
-    background: #45a049; /* Darker green on hover */
+    background-color: #66bb6a;
 }
 
 .container {
-    width: 90%; /* Container width */
-    max-width: 600px; /* Maximum width */
-    margin: 20px auto; /* Center the container */
-    padding: 20px; /* Padding inside the container */
-    background: white; /* White background for the form */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(35, 56, 63, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #81c784;
+    margin-bottom: 20px;
 }
 
 form {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack elements vertically */
+    display: flex;
+    flex-direction: column;
 }
 
 label {
-    font-size: 18px; /* Larger font size for labels */
-    margin-bottom: 5px; /* Space below labels */
+    font-size: 16px;
+    margin: 10px 0 5px;
 }
 
 select, input[type="text"] {
-    width: 100%; /* Full width for inputs */
-    padding: 10px; /* Padding inside inputs */
-    margin-bottom: 15px; /* Space below inputs */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Font size for inputs */
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 20px;
+    background: #f0f0f0;
+    color: #333;
 }
 
 .submit-button {
-    padding: 10px 20px; /* Padding for submit button */
-    background: #4CAF50; /* Green background for submit button */
-    color: white; /* White text color */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px; /* Font size for button */
-    transition: background 0.3s ease; /* Smooth transition for background color */
+    background-color: #81c784;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .submit-button:hover {
-    background: #45a049; /* Darker green on hover */
-}
-
-.back-button {
-    padding: 10px 20px; /* Padding for back button */
-    background: #f44336; /* Red background for back button */
-    color: white; /* White text color */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 16px; /* Font size for button */
-    margin-top: 10px; /* Space above the button */
-    transition: background 0.3s ease; /* Smooth transition for background color */
-}
-
-.back-button:hover {
-    background: #d32f2f; /* Darker red on hover */
+    background-color: #66bb6a;
 }
